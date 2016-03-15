@@ -17,7 +17,7 @@ end
 %% training
 M = size(train_x, 1);
 [U, D, V] = svd(train_x);
-w = zeros(1, M);
+w = zeros(M, 1);
 
 for i = 1: M
     sigma_i = D(i, i);
