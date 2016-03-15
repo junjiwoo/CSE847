@@ -6,10 +6,10 @@ function pred = RidgeRegression(train_x, train_y, test_x, lambda)
 
 %% test dimensions
 if size(train_x, 2) ~= size(test_x, 2)
-    fprintf("\nColumns of train data and test data are unequal");
+    fprintf("\nColumns of train data and test data are unequal\n");
     return
 if size(train_x, 1) ~= size(train_y, 1)
-    fprintf("\nRows of train data and target value are unequal");
+    fprintf("\nRows of train data and target value are unequal\n");
     return
 
 %% training
