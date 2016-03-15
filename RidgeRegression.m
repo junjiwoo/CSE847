@@ -23,7 +23,7 @@ for i = 1: M
     sigma_i = D(i, i);
     u_i = U(:, i);
     v_i = V(:, i);
-    w = w + ((sigma_i * u_i * train_y)/(sigma_i^2 + lambda)) * v_i;
+    w = w + ((sigma_i * u_i' * train_y)/(sigma_i^2 + lambda)) * v_i;
 end
 
 %% predicting
