@@ -16,10 +16,11 @@ end
 
 %% training
 M = size(train_x, 1);
+N = size(train_x, 2);
 [U, D, V] = svd(train_x);
-w = zeros(M, 1);
+w = zeros(N, 1);
 
-for i = 1: M
+for i = 1: N
     sigma_i = D(i, i);
     u_i = U(:, i);
     v_i = V(:, i);
@@ -30,4 +31,3 @@ end
 pred = test_x * w;
 
 end
-
