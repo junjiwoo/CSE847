@@ -15,7 +15,6 @@ if size(train_x, 1) ~= size(train_y, 1)
 end
 
 %% training
-M = size(train_x, 1);
 N = size(train_x, 2);
 [U, D, V] = svd(train_x);
 w = zeros(N, 1);
